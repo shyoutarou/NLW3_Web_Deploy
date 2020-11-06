@@ -42,13 +42,6 @@ export default function Orphanage() {
 
     try {
 
-      let token = localStorage.getItem('@happy:token');
-      if (!token) {
-        token = sessionStorage.getItem('@happy:token');
-      }
-
-      if (!token) history.push('/loginerror')
-
       api.get(`orphanages/${params.id}`).then(response => {
         setOrphanage(response.data);
       }).catch(error => toast.error('Ocorreu um erro ao recuperar o orfanato'));
