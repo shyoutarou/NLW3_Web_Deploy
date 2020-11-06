@@ -43,7 +43,7 @@ const ApprovedList = () => {
       } catch(e) {
         toast.error('Ocorreu um erro ao recuperar os orfanatos');
       } 
-  }, [])
+  }, [history])
   
   const renderOrphanages = () => {
     return orphanages.map(orphanage => {

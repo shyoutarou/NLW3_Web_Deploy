@@ -6,7 +6,6 @@ import Orphanages from "../components/Orphanages"
 import WrapperContent from "../components/WrapperContent"
 import api from "../services/api"
 import { toast } from "react-toastify"
-import { useAuth } from "../contexts/auth"
 import { useHistory } from "react-router-dom"
 
 interface IOrphanages {

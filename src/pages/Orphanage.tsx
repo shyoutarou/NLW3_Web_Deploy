@@ -7,7 +7,7 @@ import PrimaryButton from "../components/PrimaryButton";
 import '../styles/pages/orphanage.css';
 import mapIcon from '../utils/mapIcon';
 
-import { useHistory, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import api from "../services/api";
 import { toast } from "react-toastify";
 import WrapperContent from "../components/WrapperContent";
@@ -33,7 +33,6 @@ interface OrphanageParams {
 
 export default function Orphanage() {
 
-  const history = useHistory()
   const params = useParams<OrphanageParams>();
   const [orphanage, setOrphanage] = useState<Orphanage>();
   const [activeImageIndex, setActiveImageIndex] = useState(0);

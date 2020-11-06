@@ -41,7 +41,7 @@ export default function EditOrphanage() {
   const params = useParams<OrphanageParams>();
   
   const [position, setPosition] = useState({ lat: 0, lng: 0 })
-  const { user, signOut } = useAuth();
+  const { user } = useAuth();
 
   const [name, setName] = useState('')
   const [about, setAbout] = useState('')

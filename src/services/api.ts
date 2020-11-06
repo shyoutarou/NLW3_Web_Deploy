@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'https://happy-server-deploy.herokuapp.com',
+  baseURL: process.env.URL_SERVER_PROD,
 });
 
 export default api;
