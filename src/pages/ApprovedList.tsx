@@ -24,7 +24,11 @@ const ApprovedList = () => {
     try {
             let token = localStorage.getItem('@happy:token');
             if (!token) { token = sessionStorage.getItem('@happy:token');}
-            if (!token) history.push('/loginerror')
+            if (!token) 
+            {
+              history.push('/loginerror')
+              return;
+            }
 
             api.defaults.headers.authorization = `Bearer ${token}`
             api.get<IOrphanages[]>('/indexPending/1').then(res => {

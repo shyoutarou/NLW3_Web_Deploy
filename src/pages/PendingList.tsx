@@ -29,7 +29,11 @@ const PendingList = () => {
         token = sessionStorage.getItem('@happy:token');
       }
 
-      if (!token) history.push('/loginerror')
+      if (!token) 
+      {
+        history.push('/loginerror')
+        return;
+      }
 
       api.defaults.headers.authorization = `Bearer ${token}`
 

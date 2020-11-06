@@ -58,7 +58,7 @@ export default function EditOrphanage() {
 
   useEffect(() => {
     if(!params) {
-      return history.push('/pendinglist')
+      return history.push(tela === "verify" ? '/pendinglist' : '/approvedlist')
     }
 
     settela( window.location.href.indexOf("verify") !== -1 ? "verify" : "edit" )
@@ -68,7 +68,11 @@ export default function EditOrphanage() {
       token = sessionStorage.getItem('@happy:token');
     }
 
-    if (!token) history.push('/loginerror')
+    if (!token) 
+    {
+      history.push('/loginerror')
+      return;
+    }
     
     api.defaults.headers.authorization = `Bearer ${token}`
 
@@ -134,8 +138,7 @@ export default function EditOrphanage() {
         api.put(`orphanages/images/${id}`, dataimg);
     
         toast.success(`O orfanato foi ${msg_1} com sucesso`);
-        (tela === "verify" && !permission ? history.push('/approvedlist') : history.push('/pendinglist') );   
-
+        history.push(tela === "verify" ? '/pendinglist' : '/approvedlist');
       }).catch(error => toast.error(`Ocorreu um erro ao ${msg_2} o cadastro`));
 
     } catch(e) {
