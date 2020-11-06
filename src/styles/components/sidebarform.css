@@ -1,0 +1,58 @@
+.sidebarform-container {
+    min-height: 100vh;
+    display: flex;
+}
+
+.sidebarform-banner {
+    padding: 25px;
+    text-align: center;
+    width: 100%;
+}
+
+.sidebarform-banner img {
+    width: 80px;
+}
+
+.sidebarform-logo {
+    font-size: 40px;
+}
+
+.sidebarform-city {
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+.sidebarform-state {
+    font-size: 20px;
+    font-weight: lighter;
+}
+
+@media (min-width: 900px) {
+
+    .sidebarform-banner {
+        min-height: 100vh;
+        flex: 1;
+        background-color: #15C3D6;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .sidebarform-logo {
+        font-size: 70px;
+    }
+
+    .sidebarform-city {
+        font-size: 25px;
+    }
+
+    .sidebarform-state {
+        font-size: 25px;
+        font-weight: lighter;
+    }
+
+    .sidebarform-banner img {
+        width: 110px;
+    }
+}
