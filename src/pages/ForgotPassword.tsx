@@ -8,6 +8,7 @@ import { FiArrowLeft } from 'react-icons/fi'
 
 import '../styles/pages/forgotpassword.css'
 
+
 const ForgotPassword = () => {
 
     const [email, setEmail] = useState<string>('ric@shik.com')

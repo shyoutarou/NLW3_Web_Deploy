@@ -23,11 +23,7 @@ const DeleteSuccess = () => {
               token = sessionStorage.getItem('@happy:token');
             }
 
-            if (!token) 
-            {
-                history.push('/loginerror')
-                return;
-              }
+            if (!token) history.push('/loginerror')
             
             api.defaults.headers.authorization = `Bearer ${token}`
             await api.delete(`/orphanages/delete/${params.id}`).catch((err) => {
