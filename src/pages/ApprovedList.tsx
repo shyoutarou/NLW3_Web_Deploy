@@ -49,7 +49,7 @@ const ApprovedList = () => {
                   toast.error('O conteúdo desta página não foi encontrado.')
                   history.push('/')
               }else  {
-                  toast.error('Ocorreu um erro ao recuperar os orfanatos. ' + err.response)
+                  console.log(err.response.data.message)
               }
           });
       } catch {

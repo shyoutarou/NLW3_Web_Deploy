@@ -40,7 +40,6 @@ function OrphanagesMap() {
                   setOrphanages(response.data);
                 }).catch(error => toast.error('Ocorreu um erro ao recuperar os orfanatos'));
           } catch(e) {
-
             toast.error('Ocorreu um erro ao recuperar os orfanatos');
           }
       }

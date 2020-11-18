@@ -35,7 +35,7 @@ const DeleteSuccess = () => {
                     toast.error('O conteúdo desta página não foi encontrado.')
                     history.push('/')
                 }else  {
-                    toast.error('Ocorreu um erro ao recuperar os orfanatos.')
+                    console.log(err.response.data.message)
                 }
             });
     

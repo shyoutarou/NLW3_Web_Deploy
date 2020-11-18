@@ -102,7 +102,7 @@ export default function EditOrphanage() {
                     toast.error('O conteúdo desta página não foi encontrado.')
                     history.push('/')
                 }else  {
-                    toast.error('Ocorreu um erro ao recuperar o orfanato.')
+                    console.log(err.response.data.message)
                 }
             });
 
