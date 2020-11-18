@@ -41,7 +41,7 @@ const DeleteSuccess = () => {
     
             history.push('/app')
         } catch {
-            alert('Erro ao deletar')
+            toast.error('Erro ao deletar')
         }
     }
     

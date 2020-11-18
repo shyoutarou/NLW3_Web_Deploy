@@ -37,13 +37,11 @@ function OrphanagesMap() {
       async function HandleloadOrphanages() {
           try {
                   return await  api.get('orphanages').then(response => {
-
-                    console.log( "setOrphanages"   )
                   setOrphanages(response.data);
-                }).catch(error => toast.error('Ocorreu um erro IN ao recuperar os orfanatos'));
+                }).catch(error => toast.error('Ocorreu um erro ao recuperar os orfanatos'));
           } catch(e) {
 
-            toast.error('Ocorreu um erro OUT ao recuperar os orfanatos');
+            toast.error('Ocorreu um erro ao recuperar os orfanatos');
           }
       }
       
